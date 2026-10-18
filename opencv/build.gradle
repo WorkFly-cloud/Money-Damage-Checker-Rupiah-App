@@ -1,0 +1,70 @@
+// This file is part of OpenCV project.
+// It is subject to the license terms in the LICENSE file found in the top-level directory
+// of this distribution and at http://opencv.org/license.html.
+
+plugins {
+    id 'com.android.library'
+}
+
+def openCVersionName = "4.7.0-dev"
+def openCVersionCode = ((4 * 100 + 7) * 100 + 0) * 10 + 0
+
+println "OpenCV: " + openCVersionName + " " + project.buildscript.sourceFile
+
+android {
+    namespace 'org.opencv'
+    compileSdk 33
+
+    defaultConfig {
+        minSdk 21
+        targetSdk 33
+
+        versionCode openCVersionCode
+        versionName openCVersionName
+
+        externalNativeBuild {
+            cmake {
+                arguments "-DANDROID_STL=c++_shared"
+                targets "opencv_jni_shared"
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            packaging {
+                jniLibs {
+                    keepDebugSymbols += ['**/*.so']
+                }
+            }
+        }
+        release {
+            packaging {
+                jniLibs {
+                    keepDebugSymbols += ['**/*.so']
+                }
+            }
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['native/libs']
+            java.srcDirs = ['java/src']
+            aidl.srcDirs = ['java/src']
+            res.srcDirs = ['java/res']
+            manifest.srcFile 'java/AndroidManifest.xml'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path (project.projectDir.toString() + '/libcxx_helper/CMakeLists.txt')
+        }
+    }
+}
+
+dependencies {
+}

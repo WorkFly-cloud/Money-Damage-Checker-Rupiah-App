@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue"
+    android:scaleType="centerCrop">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#192d83"
+        android:elevation="4dp"
+        android:gravity="center">
+
+        <!-- Judul Header di Tengah -->
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CINTA BANGGA PAHAM RUPIAH"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Konten Utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/header">
+
+        <!-- Gambar Utama -->
+        <ImageView
+            android:id="@+id/image_front"
+            android:layout_width="256dp"
+            android:layout_height="131dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Gambar Depan Uang"
+            android:scaleType="fitCenter"
+            android:src="@drawable/cinta" />
+
+        <!-- Judul 3 Cinta -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Cinta dengan ?"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Teks Poin-Poin Cinta Rupiah -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:text="Cinta Rupiah mengajak masyarakat untuk mengenali dan merawat uang Rupiah dengan baik. Ini berarti memahami karakteristik uang, mengenali keasliannya, serta menjaga Rupiah dari ancaman pemalsuan. Ada tiga cara untuk menunjukkan cinta kepada Rupiah:" />
+
+        <!-- Poin-Poin -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="• Mengenali: Mengenali ciri-ciri keaslian uang Rupiah seperti desain, warna, dan bahan yang digunakan.\n\n• Merawat: Memperlakukan uang dengan baik, seperti tidak meremas, melipat, atau mencoret-coret uang.\n\n• Menjaga: Mencegah dan melaporkan kejahatan uang palsu serta turut menjaga nilai uang dengan cara yang tepat." />
+    </LinearLayout>
+
+    <!-- ImageButton di Bagian Bawah Kanan -->
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Lanjutkan"
+        android:scaleType="centerInside"
+        android:src="@drawable/lanjut" />
+
+</RelativeLayout>

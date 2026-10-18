@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App name -->
+    <string name="app_name">MDC App</string>
+
+    <!-- Bottom Navigation Menu Items -->
+    <string name="info_about_money">Informasi tentang uang</string>
+
+    <string name="exchange_info">Informasi syarat penukaran</string>
+
+    <!-- Classification Page Strings -->
+    <string name="select_image">Pilih Gambar</string>
+    <string name="original_image">Gambar Asli</string>
+    <string name="processed_image">Gambar Diproses</string>
+    <string name="contour_area">Luas kontur:</string>
+    <string name="percentage_contour">Persentase kontur:</string>
+
+
+    <!-- Info Money Fragment Strings -->
+    <!-- Add strings for the Info Money Fragment here -->
+    <!-- E.g., -->
+    <string name="info_money_title">Informasi Uang</string>
+    <string name="info_money_description">Deskripsi tentang uang rupiah, cara merawat, dan informasi penting lainnya.</string>
+
+    <!-- Exchange Info Fragment Strings -->
+    <!-- Add strings for the Exchange Info Fragment here -->
+    <!-- E.g., -->
+    <string name="exchange_info_title">Syarat Penukaran</string>
+    <string name="exchange_info_description">Syarat dan ketentuan untuk menukarkan uang rupiah di Bank Indonesia.</string>
+
+    <!-- Add new strings for buttons -->
+    <string name="button_1000">1000</string>
+    <string name="button_2000">2000</string>
+    <string name="button_5000">5000</string>
+    <string name="button_10000">10000</string>
+    <string name="button_20000">20000</string>
+    <string name="button_50000">50000</string>
+    <string name="button_100000">100000</string>
+</resources>

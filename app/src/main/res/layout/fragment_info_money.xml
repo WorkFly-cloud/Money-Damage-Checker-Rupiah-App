@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:background="@drawable/bg_white">
+
+
+
+    <!-- Menggunakan ScrollView agar konten dapat digulir -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="4dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- Konten untuk Info Uang -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Gambar actbar.png -->
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="163dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/actbar" />
+
+
+            <!-- Judul -->
+            <ImageButton
+                android:id="@+id/button_quiz"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="1dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_quiz"
+                android:elevation="40dp"/>
+
+            <ImageButton
+                android:id="@+id/button_kenali_cbp"
+                android:layout_width="match_parent"
+                android:layout_height="82dp"
+                android:background="?attr/selectableItemBackground"
+                android:padding="1dp"
+                android:scaleType="centerInside"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/ic_cbp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Kenali Nominal Rupiah :"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Button untuk masing-masing nominal uang -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <!-- Tombol untuk nominal uang -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_1000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_1000"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_seribu"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_2000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_dua"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_2000" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_5000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_lima"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_5000" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_10000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_sepu"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_10000" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_20000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_dupu"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_20000" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_50000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_limpu"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="@string/button_50000" />
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="8dp"
+                        card_view:cardCornerRadius="8dp"
+                        card_view:cardElevation="4dp">
+
+                        <ImageButton
+                            android:id="@+id/button_100000"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/bt_seratur"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:contentDescription="100000" />
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sekitar Uang Rupiah"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Konten Deskripsi -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rupiah merupakan alat pembayaran yang sah di Negara Kesatuan Republik Indonesia (NKRI). Rupiah wajib digunakan dalam setiap transaksi yang dilakukan di wilayah NKRI."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rupiah sebagai simbol kedaulatan negara memiliki desain yang melambangkan persatuan Indonesia, menampilkan gambar Pahlawan Nasional dan lambang negara Burung Garuda serta ornamen Nusantara yang menggambarkan keragaman budaya dan warisan adat Nusantara."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Indonesia senantiasa menjaga kualitas dan keamanan Rupiah dengan penggunaan unsur pengaman dan teknologi terkini agar Rupiah semakin mudah dikenali oleh masyarakat, menyulitkan pemalsuan dan memiliki usia edar yang lebih lama."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Untuk Rupiah yang semakin berdaulat, Bank Indonesia mengajak masyarakat senantiasa cinta, bangga dan paham Rupiah."
+                android:layout_marginBottom="24dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Syarat -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Syarat Penukaran Uang Rusak/Uang Cacat"
+                android:textSize="24sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Deskripsi Pendahuluan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Rupiah merupakan alat pembayaran yang sah di Negara Kesatuan Republik Indonesia (NKRI). Rupiah wajib digunakan dalam setiap transaksi yang dilakukan di wilayah NKRI."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:lineSpacingExtra="6dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Pengertian Uang Rusak/Cacat -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uang rusak/cacat adalah uang Rupiah yang ukuran atau fisiknya telah berubah/berbeda dari ukuran aslinya yang antara lain karena:"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Poin-Poin Deskripsi -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Terbakar\n• Berlubang\n• Hilang sebagian\n• Robek\n• Mengerut"
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Teks Detail -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uang rusak/cacat dapat ditukarkan apabila tanda keaslian Uang Rupiah tersebut masih dapat diketahui atau dikenali. Penggantian uang rusak/cacat diberikan dengan tata cara:"
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Subjudul: Uang Rupiah Kertas -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uang Rupiah Kertas"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Detail Penggantian Uang Kertas -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penggantian uang rusak/cacat diberikan dengan nilai yang sama dengan nilai nominalnya apabila memenuhi seluruh persyaratan berikut:"
+                android:layout_marginBottom="6dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="• Fisik uang Rupiah kertas lebih besar dari 2/3 (dua pertiga) ukuran aslinya\n• Ciri uang Rupiah dapat dikenali keasliannya\n• Uang Rupiah kertas rusak/cacat masih merupakan satu kesatuan dengan atau tanpa nomor seri yang lengkap\n• Uang Rupiah Kertas rusak/cacat tidak merupakan satu kesatuan dan kedua nomor seri pada uang Rupiah kertas rusak tersebut lengkap dan sama"
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Tambahan Detail Lainnya -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Apabila fisik uang Rupiah kertas sama dengan atau kurang dari 2/3 (dua pertiga) ukuran aslinya, tidak diberikan penggantian."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+
+            <!-- Subjudul: Penggantian Uang Terbakar -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penggantian uang rusak/cacat sebagian karena terbakar"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="6dp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uang Rupiah rusak/cacat sebagian karena terbakar diberikan penggantian dengan nilai yang sama nominalnya, sepanjang menurut penelitian Bank Indonesia masih dapat dikenali keasliannya."
+                android:layout_marginBottom="12dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Peringatan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PERINGATAN!"
+                android:textSize="22sp"
+                android:textColor="#FF0000"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Pesan Peringatan -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Indonesia tidak memberikan penggantian atas uang Rupiah rusak/cacat apabila menurut Bank Indonesia kerusakan Uang Rupiah tersebut diduga dilakukan secara sengaja atau dilakukan secara sengaja."
+                android:layout_marginBottom="24dp"
+                android:textSize="18sp"
+                android:textColor="#333333"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif" />
+
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

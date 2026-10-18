@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue"
+    android:scaleType="centerCrop">
+
+    <!-- Header dengan Tombol Kembali dan Judul -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#192d83"
+        android:elevation="4dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:gravity="center_vertical">
+
+        <!-- Tombol Kembali -->
+        <ImageButton
+            android:id="@+id/btn_back"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Tombol Kembali"
+            android:src="@drawable/ic_back"
+            android:layout_gravity="center_vertical"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true" />
+
+        <!-- Judul Header -->
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="Mengenal Rp 10.000"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp" />
+    </LinearLayout>
+
+    <!-- Konten ScrollView -->
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/header"
+        android:layout_marginTop="2dp"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Gambar Depan Uang dengan Rasio 1:1 -->
+            <ImageView
+                android:id="@+id/image_front"
+                android:layout_width="match_parent"
+                android:layout_height="371dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Gambar Depan Uang"
+                android:scaleType="fitCenter"
+                android:src="@drawable/img_sepu" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bagian Depan"
+                android:textSize="24sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Frans Kaisiepo adalah salah satu tokoh yang mempopulerkan kata IRIAN yang merupakan kependekan dari Ikut Republik Indonesia Anti Netherlands. Sebelum Irian ditetapkan, daerah tersebut dikenal dengan nama Papua."
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bagian Belakang"
+                android:textSize="24sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Tari Pakarena dari Sulawesi Selatan, dipercaya sebagai petunjuk kehidupan dari bidadari penghuni langit. Taman Nasional Laut Wakatobi yang terletak di Sulawesi Tenggara dikenal sebagai surga bawah laut karena keindahannya. Bunga Cempaka Hutan Kasar adalah flora identitas Sulawesi Barat dan pohonnya dapat tumbuh hingga 45 meter."
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Spesifikasi"
+                android:textSize="24sp"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Detail Spesifikasi Uang -->
+            <!-- Tabel Spesifikasi -->
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:stretchColumns="1">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Uang Kertas "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mata Uang "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_currency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Emisi "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_series"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pecahan "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_denomination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanggal Penerbitan "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_issue_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Penanda Tangan "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_signatory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tanda Air "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_watermark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bahan "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_material"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ukuran "
+                        android:textColor="#ffffff"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/spec_size"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#ffffff" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

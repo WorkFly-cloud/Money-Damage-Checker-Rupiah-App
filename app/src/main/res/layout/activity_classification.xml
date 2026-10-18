@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scaleType="centerCrop"
+    android:background="@drawable/bg_white"
+    tools:context=".ClassificationActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:background="#192d83"
+            android:elevation="4dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Tombol Kembali -->
+            <ImageButton
+                android:id="@+id/btn_back"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Tombol Kembali"
+                android:src="@drawable/ic_back"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true" />
+
+            <!-- View untuk menempatkan konten lain di tengah -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <!-- Tombol Flash -->
+            <Button
+                android:id="@+id/btn_set_threshold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-" />
+
+            <ImageButton
+                android:id="@+id/flashToggleButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginRight="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:scaleType="centerInside"
+                android:src="@drawable/l_off" />
+
+        </LinearLayout>
+
+        <!-- Real-time Camera Preview -->
+        <androidx.camera.view.PreviewView
+            android:id="@+id/previewView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp" />
+
+        <!-- Overlay Image -->
+        <ImageView
+            android:id="@+id/overlayImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="0dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/frame"
+            android:alpha="0.5" />
+
+        <!-- Tips Penggunaan Latar Bersih -->
+        <TextView
+            android:id="@+id/tipsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/previewView"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:text="Tips: Gunakan latar bersih hitam atau putih untuk hasil terbaik.\nPastikan uang dalam posisi lurus dan datar."
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <!-- Informasi tambahan untuk membuat tampilan lebih ramai -->
+        <TextView
+            android:id="@+id/additionalTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tipsTextView"
+            android:layout_marginTop="8dp"
+            android:layout_centerInParent="true"
+            android:text="Hasil deteksi lebih akurat di kondisi pencahayaan yang baik."
+            android:textSize="14sp"
+            android:textColor="#000000"
+            android:gravity="center" />
+
+        <ImageButton
+            android:id="@+id/selectImageButton"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="670dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Pilih Gambar dari Galeri"
+            android:scaleType="centerInside"
+            android:src="@drawable/galeri" />
+
+        <!-- Tombol Ambil Gambar -->
+        <ImageButton
+            android:id="@+id/captureImageButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="650dp"
+            android:layout_marginRight="156dp"
+            android:adjustViewBounds="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Ambil Gambar"
+            android:scaleType="centerInside"
+            android:src="@drawable/take" />
+
+
+    </RelativeLayout>
+</ScrollView>

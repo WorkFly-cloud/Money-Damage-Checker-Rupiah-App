@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_info_money"
+        android:title="Home"
+        android:icon="@drawable/ic_home" /> <!-- Ganti dengan nama ikon Anda -->
+    <item
+        android:id="@+id/action_classification"
+        android:title="Klasifikasi"
+        android:icon="@drawable/logo_w" /> <!-- Ganti dengan nama ikon Anda -->
+    <item
+        android:id="@+id/action_exchange_info"
+        android:title="Tentang"
+        android:icon="@drawable/ic_info" /> <!-- Ganti dengan nama ikon Anda -->
+</menu>

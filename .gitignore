@@ -1,0 +1,32 @@
+
+# Compiled files
+*.class
+*.iml
+
+# Gradle cache and build output
+.gradle/
+**/build/
+
+# Local Android SDK configuration
+local.properties
+
+# Android Studio / IntelliJ IDEA
+.idea/
+
+# macOS
+.DS_Store
+
+# Android build and native build output
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Java crash logs
+hs_err_pid*.log
+
+# Build output directories
+**/build/
+
+# Generated APK and Android packages
+*.apk
+*.aab

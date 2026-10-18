@@ -1,0 +1,99 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_blue"
+    android:scaleType="centerCrop">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#192d83"
+        android:elevation="4dp"
+        android:gravity="center">
+
+        <!-- Judul Header di Tengah -->
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CINTA BANGGA PAHAM RUPIAH"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Konten Utama -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_below="@id/header">
+
+        <!-- Gambar Utama -->
+        <ImageView
+            android:id="@+id/image_front"
+            android:layout_width="256dp"
+            android:layout_height="131dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="Gambar Depan Uang"
+            android:scaleType="fitCenter"
+            android:src="@drawable/paham" />
+
+        <!-- Judul Paham Rupiah -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3 Paham dalam ?"
+            android:textAlignment="center"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Teks Poin-Poin Paham Rupiah -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:textAlignment="center"
+            android:text="Paham Rupiah bertujuan untuk meningkatkan pemahaman masyarakat tentang peran penting Rupiah dalam perekonomian. Masyarakat diajak untuk memahami fungsi Rupiah sebagai alat transaksi, simpanan nilai, dan pengukur stabilitas ekonomi. Tiga hal yang dipahami dalam konteks ini adalah:" />
+
+        <!-- Poin-Poin -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:lineSpacingExtra="4dp"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="• Bertransaksi: Menggunakan Rupiah sebagai alat transaksi sehari-hari.\n\n• Berbelanja: Mengatur penggunaan uang dengan bijak untuk kebutuhan konsumsi dan investasi.\n\n• Berhemat: Menyimpan uang dengan cermat untuk menghadapi kebutuhan masa depan dan menjaga stabilitas keuangan." />
+    </LinearLayout>
+
+    <!-- ImageButton di Bagian Bawah Kanan -->
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="50dp"
+        android:background="?attr/selectableItemBackground"
+        android:contentDescription="Lanjutkan"
+        android:scaleType="centerInside"
+        android:src="@drawable/selesai" />
+
+</RelativeLayout>
